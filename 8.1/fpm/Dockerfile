@@ -7,4 +7,4 @@ RUN apt-get update && \
     apt-get clean
 
 RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
-    docker-php-ext-install -j$(nproc) ldap
+    docker-php-ext-install -j$(nproc) ldap mysqli

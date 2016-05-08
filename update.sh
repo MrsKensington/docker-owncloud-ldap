@@ -22,7 +22,7 @@ for i in `find owncloud -name "Dockerfile"`; do
     	echo '    apt-get clean' >> $FILE
 	echo '' >> $FILE
 	echo 'RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \' >> $FILE
-   	echo '    docker-php-ext-install -j$(nproc) ldap' >> $FILE
+   	echo '    docker-php-ext-install -j$(nproc) ldap mysqli' >> $FILE
 done
 
 rm -rf owncloud
